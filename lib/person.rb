@@ -1,29 +1,37 @@
 # your code goes here
+require "pry"
 class Person
-  attr_reader :name
-  attr_accessor :bank_account, :happiness, :hygiene
+  attr_reader :name , :happiness, :hygiene
+  attr_accessor :bank_account
+
   def initialize(name)
     @name = name
     @bank_account = 25
-
+    @happiness = 8
+    @hygiene = 8
   end
 
-def happiness(val=8)
+def happiness=(val)
+  #  binding.pry
+
   if val > 10
-    self.happiness = 10
+  @happiness = 10
   elsif val < 0
-    self.happiness = 0
+  @happiness = 0
   else
-self.happiness = val
+@happiness = val
+
 end
+# @happiness
 end
-def hygiene(val=8)
+
+def hygiene=(val)
   if val > 10
-    self.hygiene = 10
+   @hygiene = 10
   elsif val < 0
-    self.hygiene = 0
+    @hygiene = 0
   else
-self.hygiene = val
+@hygiene = val
 end
 end
 
@@ -74,3 +82,5 @@ end
 end
 
 end
+
+
